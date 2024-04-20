@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/league-spartan"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navigation bar html -->
+
+    <header>
+      <div class="logo">
+        <img src="./images/smallLogo.png" alt="Brand Logo" />
+      </div>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact Us</li>
+      </ul>
+    </header>
+
+    <!-- carousel Html -->
+
+    <div class="carousel">
+      <div id="prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          class="bi bi-arrow-left"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+          />
+        </svg>
+      </div>
+      <div id="next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          class="bi bi-arrow-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+          />
+        </svg>
+      </div>
+      <div class="carousel-images opacity">
+        <img src="./images/pexels-ash-376464.jpg" alt="carousel Images" />
+        <div class="content">
+          <h2>Delectable.</h2>
+          <p>
+            The culinary creation before us was undeniably delectable, a
+            symphony of flavors that danced upon our palates, leaving us
+            enchanted and yearning for another divine bite!
+          </p>
+          <div>
+            <button>Order Now</button>
+            <button class="learn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-images">
+        <img
+          src="./images/pexels-chan-walrus-958545.jpg"
+          alt="carousel Images"
+        />
+        <div class="content">
+          <h2>Appetizing.</h2>
+          <p>
+            The presentation was impeccable, and the aroma alone was enough to
+            stir our senses. The dish beckoned with an appetizing allure,
+            promising a journey of gastronomic delight that surpassed our
+            wildest expectations!
+          </p>
+          <div>
+            <button>Explore Taste</button>
+            <button class="learn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-images">
+        <img
+          src="./images/pexels-ella-olsson-1640772.jpg"
+          alt="carousel Images"
+        />
+        <div class="content">
+          <h2>Scrumptious.</h2>
+          <p>
+            With each morsel, we were transported to a realm of pure bliss. The
+            amalgamation of ingredients resulted in a scrumptious masterpiece
+            that tantalized our taste buds and left us utterly captivated.
+          </p>
+          <div>
+            <button>Grand Dining</button>
+            <button class="learn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-images">
+        <img
+          src="./images/pexels-nerfee-mirandilla-3186654.jpg"
+          alt="carousel Images"
+        />
+        <div class="content">
+          <h2>Nourishing.</h2>
+          <p>
+            Though simple in appearance, the dish was a revelation in taste. Its
+            subtle complexities made it eminently Nourishing, offering a
+            harmonious blend of flavors that soothed the soul and left a lasting
+            impression!
+          </p>
+          <div>
+            <button>Feast Now</button>
+            <button class="learn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

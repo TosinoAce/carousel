@@ -1,0 +1,245 @@
+/* css */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: #ffffff;
+  background-color: #232323;
+  font-family: "League Spartan", sans-serif;
+  overflow-x: hidden;
+}
+
+/* navigation Css */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 50px;
+  z-index: 100;
+}
+header img {
+  width: 70px;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  transition: 0.4s ease-in-out;
+}
+header ul li {
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+header ul li:hover {
+  color: #ff9800;
+}
+/* carousel  css */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow-x: hidden;
+}
+.carousel-images {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: translateX(100%);
+}
+.carousel-images::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.carousel-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-images .content {
+  position: absolute;
+  inset: 0 0 0 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 150px;
+  z-index: 10;
+}
+.opacity {
+  transform: translateX(0%);
+}
+
+/* controls css */
+
+#prev,
+#next {
+  position: fixed;
+  top: 45%;
+  z-index: 100;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  color: rgba(255, 255, 255, 0.6);
+}
+svg {
+  transition: 0.4s ease-in-out;
+}
+#prev:hover,
+#next:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#prev:hover svg,
+#next:hover svg {
+  color: #ffffff;
+}
+#next {
+  right: 30px;
+}
+#prev {
+  left: 30px;
+}
+
+/* contents css */
+
+h2 {
+  font-size: 100px;
+  user-select: none;
+}
+p {
+  font-size: 20px;
+  line-height: 140%;
+  margin: 20px 0;
+}
+button {
+  padding: 7px 25px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #ff9800;
+  color: #ffffff;
+  border: 1px solid #ff9800;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: "League Spartan", sans-serif;
+  transition: 0.4s ease-in-out;
+}
+button:hover {
+  background: transparent;
+  color: #ff9800;
+}
+.learn {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.learn:hover {
+  background-color: #ffffff;
+  color: #232323;
+}
+.carousel .carousel-images h2,
+.carousel .carousel-images p,
+.carousel .carousel-images button {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+}
+
+.carousel .carousel-images.opacity h2,
+.carousel .carousel-images.opacity p,
+.carousel .carousel-images.opacity button {
+  animation: showContent 0.3s 1s linear 1 forwards;
+}
+.carousel .carousel-images.opacity p {
+  animation-delay: 1.4s !important;
+}
+.carousel .carousel-images.opacity button {
+  animation-delay: 1.8s !important;
+}
+/* animation css */
+
+.fade-out {
+  animation: fadeOut 300ms 1;
+}
+.fade-in {
+  animation: fadeIn 300ms 1;
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/* Responsiveness */
+
+@media (max-width: 700px) {
+  h2 {
+    font-size: 50px;
+  }
+  .carousel-images .content {
+    padding: 70px 20px;
+  }
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 7px 20px;
+  }
+  #prev,
+  #next {
+    top: 90%;
+  }
+  #next {
+    right: 20px;
+  }
+  #prev {
+    left: 20px;
+  }
+}
